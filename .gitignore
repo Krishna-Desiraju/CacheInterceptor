@@ -229,3 +229,17 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+src/.fake/build.fsx_14955507.dll
+src/.fake/build.fsx_14955507_config.xml
+src/.fake/build.fsx_B6E6FAE8_config.xml
+src/PackagingDir/lib/net45/CacheInterceptor.dll
+src/.fake/build.fsx_CD28F2F2_config.xml
+src/ReleaseArtifacts/lib/net45/CacheInterceptor.dll
+src/.fake/build.fsx_14955507_config.xml
+src/.fake/build.fsx_14955507.dll
+src/.fake/build.fsx_14955507_config.xml
+src/.fake/build.fsx_14955507.dll
+src/.fake/*
+src/PackagingDir/*
+src/ReleaseArtifacts/*
+*.dll
