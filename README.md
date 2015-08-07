@@ -70,9 +70,10 @@ var o1 = barInterfaceProxy.GetFoo("test1");
 and if you are using any DI/IoC container, enrich them with the interceptor. Here I am using structuremap
 ```csharp
 var pg = new ProxyGenerator();
-            this.For<IBar>()
-                .EnrichAllWith(x => pg.CreateInterfaceProxyWithTarget(x, new CacheInterceptor()))
-                .Use<Bar>();
+ObjectFactory.Container.Configure
+    .For<IBar>()
+    .EnrichAllWith(x => pg.CreateInterfaceProxyWithTarget(x, new CacheInterceptor()))
+    .Use<Bar>();
 ```
 
 Other points to note:
