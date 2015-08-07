@@ -76,9 +76,9 @@ var pg = new ProxyGenerator();
 ```
 
 Other points to note:
-1) The key for cache object is Method Fullname with namespace and concatination of arguments.
-2) For arguments with primitive types, ToString() is used and for class types, data contract serialization is used. So if you are using class types as argument please ensure that they can be serialized using data contract serialization.
-3) Also caches null values
-4) Only supports instance methods and doesn't support static methods
+* The key for cache object is Method Fullname with namespace and concatination of arguments.
+* For arguments with primitive types, ToString() is used and for class types, data contract serialization is used. So if you are using class types as argument please ensure that they can be serialized using data contract serialization.
+* Also caches null values
+* Only supports instance methods and doesn't support static methods
 
 
