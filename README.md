@@ -23,6 +23,8 @@ Lets see how we can add cache to an existing instance method
 ```
 in order to add cache layer, modify the method as follows
 ```csharp
+    using CacheInterceptor;
+    
     public class FooBar
     {
         [Cache(5)]
