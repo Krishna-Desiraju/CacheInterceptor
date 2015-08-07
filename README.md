@@ -13,26 +13,26 @@ Install-Package CacheInterceptor
 Lets see how we can add cache to an existing instance method
 
 ```csharp
-    public class FooBar
+public class FooBar
+{
+    public Foo GetFoo(string value)
     {
-        public Foo GetFoo(string value)
-        {
-            return new Foo(value);
-        }
+        return new Foo(value);
     }
+}
 ```
 in order to add cache layer, modify the method as follows
 ```csharp
-    using CacheInterceptor;
-    
-    public class FooBar
+using CacheInterceptor;
+
+public class FooBar
+{
+    [Cache(5)]
+    public virtual Foo GetFoo(string value)
     {
-        [Cache(5)]
-        public virtual Foo GetFoo(string value)
-        {
-            return new Foo(value);
-        }
+        return new Foo(value);
     }
+}
 ```
 here, the changes are, firstly, the method is decorated with Cache attribute specifying the expiration time in seconds, here it cache expiration time is 5 seconds. And the second change is make your instance method virtual.
 And the final change is to invoke the instance method by creating a proxy using castle core dynamic proxy
