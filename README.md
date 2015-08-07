@@ -9,7 +9,7 @@ As said earlier, it is easy to cache layer to your instance method without actua
 Install-Package CacheInterceptor
 ```
 
-###Cache for Concrete Class Instance Methods
+###Cache for Instance Methods
 Lets see how we can add cache to an existing instance method
 
 ```csharp
