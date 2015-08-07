@@ -78,6 +78,13 @@ ObjectFactory.Container.Configure
     .Use<Bar>();
 ```
 
+Similarly, if you to cache for 12 hours, Cache attribute can be set as follows
+```csharp
+[Cache(60 * 60 * 12)]
+// or
+[Cache(43200)]
+```
+
 Other points to note:
 * The key for cache object is Method Fullname with namespace and concatination of arguments.
 * For arguments with primitive types, ToString() is used and for class types, data contract serialization is used. So if you are using class types as argument please ensure that they can be serialized using data contract serialization.
