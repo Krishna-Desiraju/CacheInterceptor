@@ -56,11 +56,11 @@ var o4 = this.FooBarProxy.GetFoo("test1");
 ###Cache for interface implementations
 Decorate the interface declaration of the method and decorate it with cache
 ```csharp
-    public interface IBar
-    {
-        [Cache(5)]
-        Foo GetFoo(string value);
-    }
+public interface IBar
+{
+    [Cache(5)]
+    Foo GetFoo(string value);
+}
 ```
 Please note that for implemetation of cache of interfaces, the actual implementation class need not be decorated.
 and change the invokation of the method as follows
